@@ -10,8 +10,9 @@ function cloneElement(element, iframe = false) {
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../reset.css"/>
-    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/style.css"/>
     <title>Marvel Tech</title>
   </head>
   <body>
@@ -27,7 +28,7 @@ function cloneElement(element, iframe = false) {
 }
 updateTechParams = (techParams) => {
   localStorage.setItem('techParams', JSON.stringify(techParams));
-}
+};
 
 function init() {
 
@@ -48,7 +49,7 @@ function init() {
     option.relatedElement = selectableBlock;
     if (techParams.activeElement === selectableBlock.className)
       option.selected = true;
-    select.append(option)
+    select.append(option);
   }
 
   const desktopTech = document.createElement('div');
@@ -74,7 +75,7 @@ function init() {
       mobileTechBlock.innerHTML = '';
       mobileTechBlock.append(cloneElement(element, true));
     }
-  }
+  };
 
   const handleSelectChange = (value) => {
     let selectedOption = null;
@@ -85,10 +86,10 @@ function init() {
     techParams.activeElement = selectedOption.relatedElement.className;
     updateTechParams(techParams);
     populateElement(selectedOption.relatedElement)
-  }
+  };
 
   select.addEventListener('change', (e) => {
-    handleSelectChange(e.target.value)
+    handleSelectChange(e.target.value);
   });
   handleSelectChange(techParams.activeElement);
 
@@ -115,7 +116,7 @@ function init() {
     techParams.enabled = e.target.checked;
     updateTechParams(techParams);
     handleToggleChange(e.target.checked)
-  })
+  });
 
 
   techHeader.append(toggleContent);
@@ -123,4 +124,3 @@ function init() {
 }
 
 init();
-

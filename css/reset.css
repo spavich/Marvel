@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+  v2.0 | 20110126
+  License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -33,6 +33,7 @@ body {
 }
 ol, ul {
   list-style: none;
+	padding: 0;
 }
 blockquote, q {
   quotes: none;
@@ -45,4 +46,38 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html{
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }

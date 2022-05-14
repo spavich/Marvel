@@ -15,9 +15,6 @@
 .techBlock__row {
   display: flex;
 }
-.tech__full{
-
-}
 .tech__half{ width: 50% }
 .tech__320{ width: 320px; }
 .tech__480{ width: 480px; }
