@@ -54,7 +54,6 @@
 }
 .controls{
 	display: flex;
-	align-items: center;
 }
 .controls__switch{
 	position: relative;
@@ -62,7 +61,7 @@
 .controls__spiderMan-icon{
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 11px;
 	left: 73px;
 	transform: translate(0, -50%);
 	z-index: 10;
