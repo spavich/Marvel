@@ -188,14 +188,11 @@ h1{
 	font-size: 14px;
 	line-height: 16px;
 }
-.comic-slider{
-	width: 560px;
-	overflow: hidden;
-}
-.comic-slider__inner{
+
+.comic-slider__items{
 	display: flex;
 }
-.comic-slider__inner-item{
+.comic-slider__item{
 	display: flex;
 	align-items: center;
 }
@@ -239,6 +236,29 @@ h1{
 }
 .comic-slider__dot + .comic-slider__dot{
 	margin-left: 9px;
+}
+/* Анимация слайдов */
+.comic-slider__items .comic-slider__item {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1s;
+	animation-name: fade;
+	animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+	from {
+			opacity: .4
+	}
+	to {
+			opacity: 1
+	}
+}
+@keyframes fade {
+	from {
+			opacity: .4
+	}
+	to {
+			opacity: 1
+	}
 }
 /* Latest Releases */
 .latestReleases{
@@ -324,13 +344,4 @@ h1{
 	font-weight: 500;
 	padding-left: 6.5px;
 	margin-bottom: 6.5px;
-}
-
-
-/* JS */
-.show{
-	display:block;
-}
-.hide{
-	display:none;
 }
